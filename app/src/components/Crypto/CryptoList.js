@@ -6,7 +6,6 @@ import CrytoCoin from './CryptoCoin';
 export default class CryptoList extends Component {
     render() {
         let { cryptos } = this.props;
-        cryptos = cryptos.sort((prevCrypto, crypto) => prevCrypto.position - crypto.position);
 
         return (
             <View style={styles.crytoCoinList}>
