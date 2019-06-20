@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20
     },
     refreshIndicator: {
+        marginTop: 30,
         left: 0,
         right: 0,
         top: 0,
