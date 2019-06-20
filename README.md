@@ -8,12 +8,15 @@ The App consumes the CoinMarketCap REST API, see the documentation [here](https:
 
 ### Running the application locally
 
-#### Requirements
+#### System requirements
 
 You need to have in your machine:
-- MySQL Server (you can configure a different database for the Active Record)
-- Ruby On Rails
-- Node.js
+- [Android Studio](https://developer.android.com/studio)
+- [MySQL Server](https://www.mysql.com/)
+- [Ruby On Rails](http://railsinstaller.org/)
+- [Node.js](https://nodejs.org/)
+
+> Note: MySQL is option since you can configure a different database for the Active Record.
 
 #### Clone the repository
 
