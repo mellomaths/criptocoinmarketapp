@@ -6,6 +6,12 @@ The App consumes the CoinMarketCap REST API, see the documentation [here](https:
 
 ## Guides
 
+### Table of Contents
+
+- [Running locally](#running-the-application-locally)
+- [Possible problems and solutions](#possible-problems-and-solutions)
+
+
 ### Running the application locally
 
 #### System requirements
