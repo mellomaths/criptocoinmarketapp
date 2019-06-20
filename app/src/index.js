@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
+
+import Header from './components/Header';
 
 export default class App extends Component {
+    state = {
+        title: 'Crypto Coin Market App'
+    };
+
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>Welcome to Crypto Coin Market!</Text>
-            </View>
+            <ScrollView style={styles.container}>
+                <Header title={this.state.title} />
+            </ScrollView>
         );
     }
 }
@@ -14,13 +20,6 @@ export default class App extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#F5FCFF'
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10
     }
 });
