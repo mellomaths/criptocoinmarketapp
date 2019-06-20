@@ -4,13 +4,21 @@ import { Text, StyleSheet, View } from 'react-native';
 export default class CryptoCoin extends Component {
     render() {
         const { crypto } = this.props;
-        const { id, position, name, price } = crypto;
+        const { id, position, name, price, market_cap } = crypto;
 
         return (
             <View style={styles.cryptoContainer}>
                 <Text style={styles.cryptoPosition}>{`#${position}`}</Text>
                 <Text style={styles.crytoName}>{name}</Text>
-                <Text style={styles.crytoPrice}>R$ {price}</Text>
+
+                <View>
+                    <Text style={styles.field}>
+                        Preço: <Text style={styles.fieldValue}>R$ {price}</Text>
+                    </Text>
+                    <Text style={styles.field}>
+                        Capitalização de Mercado: <Text style={styles.fieldValue}>R$ {market_cap}</Text>
+                    </Text>
+                </View>
             </View>
         );
     }
@@ -36,7 +44,13 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         color: '#F5FCFF'
     },
-    crytoPrice: {
-        color: '#F5FCFF'
+    field: {
+        color: '#F5FCFF',
+        fontWeight: 'bold',
+        fontSize: 12
+    },
+    fieldValue: {
+        color: '#F5FCFF',
+        fontSize: 10
     }
 });
