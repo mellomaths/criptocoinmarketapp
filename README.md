@@ -24,7 +24,7 @@ cd cryptocoinmarketapp
 
 #### Configure the mysql2 adapter
 
-> Note: If you don't have MySQL Server, you can use the `sqlite3` gem. Read more here. If you are going to configure a different database as the database for Active Record, you should do that before the rest of the tutorial.
+> Note: If you don't have MySQL Server, you can use the `sqlite3` gem. Read more [here](https://github.com/mellomaths/cryptocoinmarketapp#set-sqlite3-on-rails-server). If you are going to configure a different database as the database for Active Record, you should do that before the rest of the tutorial.
 
 In the `/server/config/database.yml` file, set the variables `username` and `password` to your local MySQL Database configuration.
 
