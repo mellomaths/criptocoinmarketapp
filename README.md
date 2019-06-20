@@ -1,8 +1,8 @@
 # Crypto Coin Market App
 
-A Ruby on Rails and React Native App to list price of the top 10 most important cryptocurrencies consuming the [CoinMarketCap](https://coinmarketcap.com/pt-br/).
+A Ruby on Rails and React Native App to list price of the top 10 most important cryptocurrencies based on market capitalization according to [CoinMarketCap](https://coinmarketcap.com/pt-br/).
 
-- [Documentation for the CoinMarketCap REST API](https://coinmarketcap.com/api/documentation/v1/#)
+The App consumes the CoinMarketCap REST API, see the documentation [here](https://coinmarketcap.com/api/documentation/v1/#).
 
 ## Guides
 
@@ -11,7 +11,7 @@ A Ruby on Rails and React Native App to list price of the top 10 most important 
 #### Requirements
 
 You need to have in your machine:
-- MySQL Server
+- MySQL Server (you can configure a different database for the Active Record)
 - Ruby On Rails
 - Node.js
 
@@ -22,6 +22,20 @@ git clone https://github.com/mellomaths/criptocoinmarketapp.git
 cd cryptocoinmarketapp
 ```
 
+#### Configure the mysql2 adapter
+
+> Note: If you don't have MySQL Server, you can use the `sqlite3` gem. Read more here. If you are going to configure a different database as the database for Active Record, you should do that before the rest of the tutorial.
+
+In the `/server/config/database.yml` file, set the variables `username` and `password` to your local MySQL Database configuration.
+
+```yml
+default: &default
+  ...
+  username: <YOUR-DATABASE-USERNAME>
+  password: <YOUR-DATABASE-PASSWORD>
+  host: localhost
+```
+
 #### Rails Database Creation and Migration
 
 ```bash
@@ -30,15 +44,35 @@ rake db:create
 rake db:migrate
 ```
 
+#### Installing Rails dependencies
+
+```bash
+bundle install
+```
+
+
 #### Running the Rails REST API
 
 ```
 rails s
 ```
 
+#### Installing the mobile App dependencies
+
+```bash
+cd app
+npm install
+```
+
+Using Yarn:
+```bash
+yarn install
+```
+
+
 #### Start your android emulator
 
-After starting the emulator (like [Genymotion](https://www.genymotion.com/)), you should map the Rails REST API port: `3000` to the deviced started.
+After starting the emulator (like [Genymotion](https://www.genymotion.com/)), you should map the Rails REST API port to the deviced started.
 
 ```bash
 adb reverse tcp:3000 tcp:3000
@@ -52,3 +86,17 @@ npm run android
 ```
 
 And should be all set and running.
+
+### Possible problems and solutions
+
+#### Set sqlite3 on Rails Server
+
+In the `/server/config/database.yml` file, you should find a `adapter` variable configured to use the `mysql2`. Change that to `sqlite3` like the example below and delete the variables `username` and `password` as they are not needed.
+
+```yml
+default: &default
+  adapter: 'sqlite3'
+  ...
+```
+
+In the `/server/Gemfile` file, replace the `gem 'mysql2', '>= 0.3.18', '< 0.6.0'` line to `gem 'sqlite3'`.
