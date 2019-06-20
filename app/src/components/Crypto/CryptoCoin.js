@@ -4,12 +4,14 @@ import { Text, StyleSheet, View } from 'react-native';
 export default class CryptoCoin extends Component {
     render() {
         const { crypto } = this.props;
-        const { id, position, name, price, market_cap } = crypto;
+        const { id, position, name, symbol, price, market_cap } = crypto;
 
         return (
             <View style={styles.cryptoContainer}>
                 <Text style={styles.cryptoPosition}>{`#${position}`}</Text>
-                <Text style={styles.crytoName}>{name}</Text>
+                <Text style={styles.crytoName}>
+                    {name} ({symbol})
+                </Text>
 
                 <View>
                     <Text style={styles.field}>
