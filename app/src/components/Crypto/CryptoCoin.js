@@ -15,10 +15,10 @@ export default class CryptoCoin extends Component {
 
                 <View>
                     <Text style={styles.field}>
-                        Preço: <Text style={styles.fieldValue}>R$ {price}</Text>
+                        Price: <Text style={styles.fieldValue}>R$ {price}</Text>
                     </Text>
                     <Text style={styles.field}>
-                        Capitalização de Mercado: <Text style={styles.fieldValue}>R$ {market_cap}</Text>
+                        Market Cap: <Text style={styles.fieldValue}>R$ {market_cap}</Text>
                     </Text>
                 </View>
             </View>
@@ -35,13 +35,13 @@ const styles = StyleSheet.create({
         borderRadius: 3
     },
     cryptoPosition: {
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: 'bold',
         color: '#F5FCFF',
         textAlign: 'right'
     },
     crytoName: {
-        fontSize: 16,
+        fontSize: 25,
         fontWeight: 'bold',
         marginBottom: 5,
         color: '#F5FCFF'
@@ -49,10 +49,10 @@ const styles = StyleSheet.create({
     field: {
         color: '#F5FCFF',
         fontWeight: 'bold',
-        fontSize: 12
+        fontSize: 20
     },
     fieldValue: {
         color: '#F5FCFF',
-        fontSize: 10
+        fontSize: 17
     }
 });

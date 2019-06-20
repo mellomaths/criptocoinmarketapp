@@ -9,7 +9,7 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     header: {
-        fontSize: 33,
+        fontSize: 40,
         textAlign: 'center',
         fontWeight: 'bold',
         backgroundColor: '#772953',

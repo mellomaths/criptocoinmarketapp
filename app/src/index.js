@@ -6,7 +6,7 @@ import Crypto from './components/Crypto';
 
 export default class App extends Component {
     state = {
-        title: 'Crypto Coin Market App'
+        title: 'Crypto Coin Market'
     };
 
     render() {
