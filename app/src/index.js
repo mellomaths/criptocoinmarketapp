@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 
 import Header from './components/Header';
+import Crypto from './components/Crypto';
 
 export default class App extends Component {
     state = {
@@ -12,6 +13,7 @@ export default class App extends Component {
         return (
             <ScrollView style={styles.container}>
                 <Header title={this.state.title} />
+                <Crypto />
             </ScrollView>
         );
     }
