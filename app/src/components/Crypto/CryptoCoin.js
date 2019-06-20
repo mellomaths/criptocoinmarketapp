@@ -28,7 +28,6 @@ export default class CryptoCoin extends Component {
 
 const styles = StyleSheet.create({
     cryptoContainer: {
-        marginHorizontal: 20,
         marginVertical: 10,
         padding: 20,
         backgroundColor: '#772953',
