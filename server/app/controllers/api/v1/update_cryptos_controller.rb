@@ -12,6 +12,7 @@ module Api
                 crypto_coins.each do |coin|
 
                     name = coin["name"]
+                    symbol = coin["symbol"]
                     position = coin["cmc_rank"]
                     price = coin["quote"][currency_convertion]["price"]
                     market_cap = coin["quote"][currency_convertion]["market_cap"]
@@ -20,6 +21,7 @@ module Api
                     if crypto_saved
                         crypto_saved.update_attributes({
                             name: name,
+                            symbol: symbol,
                             position: position,
                             price: price,
                             market_cap: market_cap                            
@@ -27,6 +29,7 @@ module Api
                     else
                         newCrypto = Crypto.create({
                             name: name,
+                            symbol: symbol,
                             position: position,
                             price: price,
                             market_cap: market_cap
