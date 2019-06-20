@@ -3,7 +3,8 @@ module Api
         class CryptosController < ApplicationController
             
             def index 
-                render json: { cryptos: 'Ok' }, status: :ok
+                cryptos = Crypto.order('position')
+                render json: { cryptos: cryptos }, status: :ok
             end
 
         end
