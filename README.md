@@ -2,15 +2,26 @@
 
 A Ruby on Rails and React Native App to list price of the top 10 most important cryptocurrencies based on market capitalization according to [CoinMarketCap](https://coinmarketcap.com/pt-br/).
 
-The App consumes the CoinMarketCap REST API, see the documentation [here](https://coinmarketcap.com/api/documentation/v1/#).
+The app consumes the CoinMarketCap REST API, see the documentation [here](https://coinmarketcap.com/api/documentation/v1/#).
 
 ## Guides
 
 ### Table of Contents
 
+- [Quick Start](#quick-start)
 - [Running locally](#running-the-application-locally)
 - [Possible problems and solutions](#possible-problems-and-solutions)
 
+### Quick start
+
+The Rails REST has two endpoints:
+
+One for getting the cryptocurrencies stored on database: `/cryptos`.
+And the other to update the price, market cap and its position based on market cap: `/update_crytos`. The server will get this information from the CoinMarketCap REST API and store on the database.
+
+See a further documentation here.
+
+The React Native App will consume this API and show the data to the user.
 
 ### Running the application locally
 
