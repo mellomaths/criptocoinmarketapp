@@ -17,7 +17,7 @@ The app consumes the CoinMarketCap REST API, see the documentation [here](https:
 The Rails REST has two endpoints:
 
 One for getting the cryptocurrencies stored on database: `/cryptos`.
-And the other to update the price, market cap and its position based on market cap: `/update_crytos`. The server will get this information from the CoinMarketCap REST API and store on the database.
+And the other to update the price, market cap and its position based on market cap: `/update_cryptos`. The server will get this information from the CoinMarketCap REST API and store on the database.
 
 See a further documentation [here](https://github.com/mellomaths/cryptocoinmarketapp/blob/master/docs/restapi.md).
 
