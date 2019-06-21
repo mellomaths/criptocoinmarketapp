@@ -54,7 +54,7 @@ export default class Crypto extends Component {
                     onPress={this.onRefreshPress}
                     title="Refresh"
                     color="#ff4081"
-                    accessibilityLabel="Learn more about this purple button"
+                    accessibilityLabel="Refresh cryptocurrencies info"
                 />
                 {this._renderCryptoCoinList()}
                 {this._renderRefreshIndicator()}
