@@ -43,7 +43,7 @@ Returns json data with a list of all cryptocurrencies stored in the database.
 
 ## **Update Cryptocurrencies**
 
-Stored the top 10 cryptocurrencies based on market cap from the CoinMarketCap REST API. If the cryto is already stored, the server will updates its properties.
+Stores the top 10 cryptocurrencies based on market cap from the CoinMarketCap REST API. If the cryto is already stored, the server will updates its properties.
 
 -   **URL**
 
