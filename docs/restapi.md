@@ -2,7 +2,7 @@
 
 ## **Get Cryptocurrencies**
 
-Returns json data with a list of all cryptocurrencies stored in the database.
+Returns JSON formatted data with a list of all cryptocurrencies stored in the database.
 
 -   **URL**
 
@@ -22,8 +22,8 @@ Returns json data with a list of all cryptocurrencies stored in the database.
 
 -   **Success Response:**
 
-    -   **Code:** 200 <br />
-        **Content:**
+    -   **Code:** 200
+    -   **Content:**
         ```json
         {
             "cryptos": [
@@ -63,8 +63,8 @@ Stores the top 10 cryptocurrencies based on market cap from the CoinMarketCap RE
 
 -   **Success Response:**
 
-    -   **Code:** 200 <br />
-        **Content:**
+    -   **Code:** 200
+    -   **Content:**
         ```json
         {
             "message": "Cryptos loaded successfully"
