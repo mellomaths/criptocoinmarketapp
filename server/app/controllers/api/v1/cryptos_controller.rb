@@ -4,7 +4,7 @@ module Api
             
             def index 
                 cryptos = Crypto.order('position')
-                render json: { cryptos: cryptos }, status: :ok
+                render json: { cryptos: cryptos.first(10) }, status: :ok
             end
 
         end
