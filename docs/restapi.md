@@ -37,7 +37,6 @@ Returns json data with a list of all cryptocurrencies stored in the database.
                     "created_at": "2019-06-20T19:51:10.000Z",
                     "updated_at": "2019-06-20T21:27:55.000Z"
                 },
-                ...
             ]
         }
         ```
